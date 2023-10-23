@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      document.documentElement.className += ' js';
+    </script>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +23,7 @@
     <title>Aves Fantásticas</title>
   </head>
   <body>
-    <nav class="menu">
+    <nav class="menu js-menu">
       <ul>
         <li><a href="#aves">Aves</a></li>
         <li><a href="#faq">Faq</a></li>
@@ -36,19 +39,17 @@
       </ul>
     </nav>
 
-    <section class="grid-section aves" id="aves">
+    <section class="grid-section aves js-scroll" id="aves">
       <h1 class="titulo">Aves Fantásticas</h1>
-      <ul class="aves-lista">
-        <li>
-          <img src="assets/img/corvo.jpg" alt="corvo" />
-          <img src="assets/img/coruja.jpg" alt="coruja" />
-          <img src="assets/img/aguia.jpg" alt="aguia" />
-          <img src="assets/img/falcao.jpg" alt="falcao" />
-          <img src="assets/img/papagaio.jpg" alt="papagaio" />
-          <img src="assets/img/tucano.jpg" alt="tucano" />
-        </li>
+      <ul class="aves-lista js-tabmenu">
+        <li><img src="assets/img/corvo.jpg" alt="corvo" /></li>
+        <li><img src="assets/img/coruja.jpg" alt="coruja" /></li>
+        <li><img src="assets/img/aguia.jpg" alt="aguia" /></li>
+        <li><img src="assets/img/falcao.jpg" alt="falcao" /></li>
+        <li><img src="assets/img/papagaio.jpg" alt="papagaio" /></li>
+        <li><img src="assets/img/tucano.jpg" alt="tucano" /></li>
       </ul>
-      <div class="aves-descricao">
+      <div class="aves-descricao js-tabcontent">
         <section>
           <h2>Corvo</h2>
           <p>
@@ -218,9 +219,9 @@
       </div>
     </section>
 
-    <section class="grid-section faq" id="faq">
+    <section class="grid-section faq js-scroll" id="faq">
       <h1 class="titulo">FAQ</h1>
-      <dl class="faq-lista">
+      <dl class="faq-lista js-accordion">
         <dt>Qual é a característica mais marcante das aves?</dt>
         <dd>
           Uma das características mais distintivas das aves é a presença de
@@ -249,7 +250,7 @@
       </dl>
     </section>
 
-    <section class="grid-section contato" id="contato">
+    <section class="grid-section contato js-scroll" id="contato">
       <h1 class="titulo">Contato</h1>
       <div class="mapa">
         <img src="assets/img/mapa.png" alt="Mapa" />
