@@ -1,0 +1,19 @@
+.tooltip {
+  position: absolute;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0 2px #d63, 0 0 0 6px rgba(0, 0, 0, 0.6);
+  max-width: 300px;
+  transition: opacity 0.3s ease;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  opacity: 0;
+}
+
+.tooltip.visible {
+  opacity: 1;
+}
