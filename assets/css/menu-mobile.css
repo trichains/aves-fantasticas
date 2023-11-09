@@ -10,31 +10,44 @@
     font-family: 'IBM Plex Mono', monospace;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     color: white;
     cursor: pointer;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     margin: 10px;
     border-radius: 4px;
     align-items: center;
     position: relative;
     z-index: 300;
   }
+
   .js [data-menu='button']::after {
     margin-left: 10px;
     content: '☰';
     font-size: 1.5rem;
+    transition: transform 0.3s;
   }
+
+  .js [data-menu='button'].ativo::after {
+    transform: rotate(90deg);
+  }
+
   .js [data-menu='list'] {
-    display: block;
+    display: none;
     position: absolute;
     width: 160px;
     z-index: 200;
     top: 0;
     background: #d63;
     padding: 60px 0 20px 0;
-    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .2);
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
   }
+
+  .js [data-menu='list'].ativo {
+    display: block;
+    animation: show-down 0.3s forwards;
+  }
+
   .js .dropdown-menu {
     top: 14px;
     border: none;
@@ -48,20 +61,30 @@
     border-right: 10px solid #faf6ed;
     border-bottom: 10px solid transparent;
   }
-}
 
-.js [data-dropdown]:hover .dropdown-menu,
-.js [data-dropdown].ativo .dropdown-menu {
-  animation: arrasta 0.3s forwards;
-}
-
-@keyframes arrasta {
-  from {
-    opacity: 0;
-    transform: translate3d(30px, 0px, 0);
+  .js [data-dropdown]:hover .dropdown-menu,
+  .js [data-dropdown].ativo .dropdown-menu {
+    animation: show-right 0.3s forwards;
   }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+
+  @keyframes show-right {
+    from {
+      opacity: 0;
+      transform: translate3d(30px, 0px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes show-down {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -30px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 }
