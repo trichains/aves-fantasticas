@@ -45,9 +45,9 @@
           </li>
         </ul>
       </nav>
-      <section class="grid-section aves js-scroll" id="aves">
+      <section class="grid-section aves" data-anime="scroll" id="aves">
         <h1 class="titulo">Aves Fantásticas</h1>
-        <ul class="aves-lista js-tabmenu">
+        <ul class="aves-lista" data-tab="menu">
           <li><img src="assets/img/corvo.jpg" alt="corvo" /></li>
           <li><img src="assets/img/coruja.jpg" alt="coruja" /></li>
           <li><img src="assets/img/aguia.jpg" alt="aguia" /></li>
@@ -55,8 +55,8 @@
           <li><img src="assets/img/papagaio.jpg" alt="papagaio" /></li>
           <li><img src="assets/img/tucano.jpg" alt="tucano" /></li>
         </ul>
-        <div class="aves-descricao js-tabcontent">
-          <section>
+        <div class="aves-descricao" data-tab="content">
+          <section data-anime="show-right">
             <h2>Corvo</h2>
             <p>
               Os corvos são aves conhecidas por sua inteligência e adaptabilidade.
@@ -80,7 +80,7 @@
               paisagens urbanas até habitats rurais.
             </p>
           </section>
-          <section>
+          <section data-anime="show-right">
             <h2>Coruja</h2>
             <p>
               As corujas são aves de rapina noturnas pertencentes à ordem
@@ -107,7 +107,7 @@
               diferentes nichos ecológicos e comportamentos de caça.
             </p>
           </section>
-          <section>
+          <section data-anime="show-down">
             <h2>Águia</h2>
             <p>
               As águias são aves de rapina majestosas e poderosas pertencentes à
@@ -134,7 +134,7 @@
               estratégias de caça.
             </p>
           </section>
-          <section>
+          <section data-anime="show-down">
             <h2>Falcão</h2>
             <p>
               Os falcões são aves de rapina ágeis e velozes, pertencentes à
@@ -163,7 +163,7 @@
               estratégias de caça.
             </p>
           </section>
-          <section>
+          <section data-anime="show-right">
             <h2>Papagaio</h2>
             <p>
               Os papagaios são aves coloridas e sociáveis pertencentes à ordem
@@ -192,7 +192,7 @@
               características distintas e comportamentos únicos.
             </p>
           </section>
-          <section>
+          <section data-anime="show-right">
             <h2>Tucano</h2>
             <p>
               Os tucanos são aves exóticas e coloridas conhecidas por seus bicos
@@ -224,9 +224,10 @@
           </section>
         </div>
       </section>
-      <section class="grid-section faq js-scroll" id="faq">
+
+      <section class="grid-section faq" data-anime="scroll" id="faq">
         <h1 class="titulo">FAQ</h1>
-        <dl class="faq-lista js-accordion">
+        <dl class="faq-lista" data-anime="accordion">
           <dt>Qual é a característica mais marcante das aves?</dt>
           <dd>
             Uma das características mais distintivas das aves é a presença de
@@ -254,7 +255,29 @@
           </dd>
         </dl>
       </section>
-      <section class="grid-section contato js-scroll" id="contato">
+
+      <section class="grid-section numeros" data-anime="scroll">
+        <h1 class="titulo">Números</h1>
+        <div class="numeros-grid">
+          <div class="numero-ave">
+            <h3>Corvos</h3>
+            <span data-numero>43761329</span>
+          </div>
+          <div class="numero-ave">
+            <h3>Corujas</h3>
+            <span data-numero>798315672</span>
+          </div>
+          <div class="numero-ave">
+            <h3>Águias</h3>
+            <span data-numero>2836147291</span>
+          </div>
+          <div class="numero-ave">
+            <h3>Papagaios</h3>
+            <span data-numero>189763542</span>
+        </div>
+      </section>
+
+      <section class="grid-section contato" data-anime="scroll" id="contato">
         <h1 class="titulo">Contato</h1>
         <div class="mapa" data-tooltip aria-label="Localização">
           <img src="assets/img/mapa.png" alt="Mapa" />
