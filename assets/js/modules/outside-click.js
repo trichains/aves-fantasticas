@@ -1,11 +1,12 @@
-
 export default function outsideClick(dropdown, events, callback) {
   const html = document.documentElement;
   const dataOutside = 'data-outside';
 
   if (!dropdown.hasAttribute(dataOutside)) {
     events.forEach((userEvent) => {
-      html.addEventListener(userEvent, handleOutsideClick);
+      setTimeout(() => {
+        html.addEventListener(userEvent, handleOutsideClick);
+      });
     });
     dropdown.setAttribute(dataOutside, '');
   }
