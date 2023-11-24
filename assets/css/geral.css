@@ -1,4 +1,12 @@
-body, h1, h2, ul, li, p, dd, dt, dl {
+body,
+h1,
+h2,
+ul,
+li,
+p,
+dd,
+dt,
+dl {
   margin: 0px;
   padding: 0px;
 }
@@ -13,7 +21,7 @@ ul {
 }
 
 body {
-  background: #faf6ed;
+  background: #ffffff;
   color: #222;
   -webkit-font-smoothing: antialiased;
 }
@@ -27,7 +35,7 @@ body {
   grid-column: 3 / 5;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  background: #D63;
+  background: #d63;
 }
 
 .menu ul {
@@ -46,7 +54,7 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 0.875rem;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 
 .grid-section {
@@ -73,9 +81,9 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   margin-bottom: 1rem;
-  color: #D63;
+  color: #d63;
 }
 
 .aves h2::before {
@@ -84,7 +92,7 @@ body {
   width: 40px;
   height: 10px;
   margin-right: 10px;
-  background: #D63;
+  background: #d63;
 }
 
 .aves p {
@@ -108,13 +116,13 @@ body {
 }
 
 .aves-lista::-webkit-scrollbar-thumb {
-  background: #D63;
-  border-left: 4px solid #faf6ed;
-  border-right: 4px solid #faf6ed;
+  background: #d63;
+  border-left: 4px solid #ffffff;
+  border-right: 4px solid #ffffff;
 }
 
 .aves-lista::-webkit-scrollbar-track {
-  background: #faf6ed;
+  background: #ffffff;
 }
 
 .aves-descricao {
@@ -126,15 +134,15 @@ body {
 }
 
 .faq-lista {
-  grid-column: 2 / 4
+  grid-column: 2 / 4;
 }
 
 .faq-lista dt {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
   margin-top: 2rem;
-  margin-bottom: .5rem;
-  color: #D63;
+  margin-bottom: 0.5rem;
+  color: #d63;
 }
 
 .faq-lista dt::before {
@@ -143,12 +151,12 @@ body {
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #D63;
+  background: #d63;
 }
 
 .faq-lista dd {
   font-family: Helvetica, Arial;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   margin-left: 30px;
 }
 
@@ -171,13 +179,13 @@ body {
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #D63;
+  background: #d63;
 }
 
 .copy {
   grid-column: 3/5;
   margin-bottom: 2rem;
-  background: #D63;
+  background: #d63;
 }
 
 .copy p {
@@ -190,7 +198,9 @@ body {
   .grid-container {
     grid-template-columns: 1fr;
   }
-  .menu, .grid-section, .copy {
+  .menu,
+  .grid-section,
+  .copy {
     grid-column: 1;
   }
   .grid-section {
@@ -200,7 +210,9 @@ body {
   .aves-lista {
     grid-column: 1;
   }
-  .faq-lista, .dados, .mapa {
+  .faq-lista,
+  .dados,
+  .mapa {
     grid-column: 1 / 3;
   }
   .grid-section h1 {
@@ -214,20 +226,20 @@ body {
   }
 }
 
-.js [data-tab="content"] section {
+.js [data-tab='content'] section {
   display: none;
 }
 
-[data-tab="content"] section.ativo {
+[data-tab='content'] section.ativo {
   display: block !important;
 }
 
-[data-tab="content"] section.ativo.show-right {
-  animation: show-right .5s forwards;
+[data-tab='content'] section.ativo.show-right {
+  animation: show-right 0.5s forwards;
 }
 
-[data-tab="content"] section.ativo.show-down {
-  animation: show-down .5s forwards;
+[data-tab='content'] section.ativo.show-down {
+  animation: show-down 0.5s forwards;
 }
 
 @keyframes show-right {
@@ -252,22 +264,22 @@ body {
   }
 }
 
-.js [data-anime="accordion"] dd {
+.js [data-anime='accordion'] dd {
   display: none;
 }
 
-[data-anime="accordion"] dt::after {
+[data-anime='accordion'] dt::after {
   content: '⬎';
   margin-left: 10px;
 }
 
-[data-anime="accordion"] dt.ativo::after {
+[data-anime='accordion'] dt.ativo::after {
   content: '⬏';
 }
 
-[data-anime="accordion"] dd.ativo {
+[data-anime='accordion'] dd.ativo {
   display: block;
-  animation: slideDown .5s forwards;
+  animation: slideDown 0.5s forwards;
 }
 
 @keyframes slideDown {
@@ -281,13 +293,13 @@ body {
   }
 }
 
-.js [data-anime="scroll"] {
+.js [data-anime='scroll'] {
   opacity: 0;
   transform: translate3d(-30px, 0, 0);
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.js [data-anime="scroll"].ativo {
+.js [data-anime='scroll'].ativo {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
@@ -297,19 +309,19 @@ body {
   content: '';
   width: 6px;
   height: 6px;
-  background: #DD2222;
+  background: #dd2222;
   border-radius: 50%;
   margin-left: 4px;
   border: 2px solid #222;
-  animation: pulse .5s infinite;
+  animation: pulse 0.5s infinite;
 }
 
 [data-semana].aberto::after {
-  background: #22DD77;
+  background: #22dd77;
 }
 
 .btc-preco {
-  background: #22DD77;
+  background: #22dd77;
   padding: 0.2rem 0.5rem;
   font-weight: bold;
   border-radius: 5px;

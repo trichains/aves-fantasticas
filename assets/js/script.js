@@ -17,7 +17,7 @@ initTabNav();
 initModal();
 initTooltip();
 initDropdownMenu();
-initMenuMobile()
+initMenuMobile();
 initFuncionamento();
 initFetchAves();
 initFetchBtc();

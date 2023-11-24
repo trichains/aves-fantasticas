@@ -6,14 +6,17 @@ export default function initAnimaNumber() {
       const totalNumber = +element.innerText;
       const increment = Math.floor(totalNumber / 100);
       let start = 0;
-      const timer = setInterval(() => {
-        start = start + increment;
-        element.innerText = start;
-        if (start > totalNumber) {
-          element.innerText = totalNumber;
-          clearInterval(timer);
+
+      function updateNumber() {
+        start += increment;
+        element.innerText = Math.min(start, totalNumber);
+
+        if (start < totalNumber) {
+          requestAnimationFrame(updateNumber);
         }
-      }, 25 * Math.random());
+      }
+
+      requestAnimationFrame(updateNumber);
     });
   }
 
