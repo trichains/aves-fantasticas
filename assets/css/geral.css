@@ -138,6 +138,7 @@ body {
 }
 
 .faq-lista dt {
+  cursor: pointer;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
   margin-top: 2rem;
