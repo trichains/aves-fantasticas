@@ -17,13 +17,13 @@ export default class DropdownMenu {
     event.preventDefault();
     const element = event.currentTarget;
     event.classList.toggle(this.activeClass);
-    outsideClick(event.currentTarget, this.events, () => {
+    outsideClick(element, this.events, () => {
       element.classList.remove('active');
     });
   }
 
   // adiciona os eventos ao dropdown menu
-  addDropdownMenusEvents() {
+  addDropdownMenusEvent() {
     this.dropdownMenus.forEach((menu) => {
       this.events.forEach((userEvent) => {
         menu.addEventListener(userEvent, this.activeDropdownMenu);
@@ -33,7 +33,7 @@ export default class DropdownMenu {
 
   init() {
     if (this.dropdownMenus.length) {
-      this.addDropdownMenusEvents();
+      this.addDropdownMenusEvent();
     }
     return this;
   }
