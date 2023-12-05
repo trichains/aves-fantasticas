@@ -1,22 +1,44 @@
-export default function initModal() {
-  const openButton = document.querySelector('[data-modal="open"]');
-  const closeButton = document.querySelector('[data-modal="close"]');
-  const containerModal = document.querySelector('[data-modal="container"]');
+export default class Modal {
+  constructor(botaoAbrir, botaoFechar, containerModal) {
+    this.openButton = document.querySelector(botaoAbrir);
+    this.closeButton = document.querySelector(botaoFechar);
+    this.containerModal = document.querySelector(containerModal);
 
-  if (openButton && closeButton && containerModal) {
-    function toggleModal(e) {
-      e.preventDefault();
-      containerModal.classList.toggle('ativo');
+    // bind this ao callback para o this do objeto da classe ser o objeto da classe
+    this.eventToggleModal = this.eventToggleModal.bind(this);
+    this.cliqueForaModal = this.cliqueForaModal.bind(this);
+  }
+
+  // abre ou fecha o modal
+  toggleModal() {
+    this.containerModal.classList.toggle('ativo');
+  }
+
+  // adiciona o evento de toggle ao modal
+  eventToggleModal(event) {
+    event.preventDefault();
+    this.toggleModal();
+  }
+
+  // fecha o modal ao clicar fora
+  cliqueForaModal(event) {
+    if (event.target === this.containerModal) {
+      this.toggleModal();
     }
+  }
 
-    function clickAway(e) {
-      if (e.target === this) {
-        toggleModal(e);
-      }
+  // adiciona os eventos aos elementos do modal
+  addModalEvent() {
+    this.openButton.addEventListener('click', () => this.eventToggleModal);
+    this.closeButton.addEventListener('click', () => this.eventToggleModal);
+    this.containerModal.addEventListener('click', this.cliqueForaModal);
+  }
+
+  // inicializa o modal
+  init() {
+    if (this.openButton && this.closeButton && this.containerModal) {
+      this.addModalEvent();
     }
-
-    openButton.addEventListener('click', toggleModal);
-    closeButton.addEventListener('click', toggleModal);
-    containerModal.addEventListener('click', clickAway);
+    return this;
   }
 }
