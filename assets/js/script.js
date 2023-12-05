@@ -6,7 +6,7 @@ import Tooltip from './modules/tooltip.js';
 import ScrollAnima from './modules/scroll-anima.js';
 import DropdownMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
-import initFuncionamento from './modules/funcionamento.js';
+import Funcionamento from './modules/funcionamento.js';
 import fetchAves from './modules/fetch-aves.js';
 import fetchBTC from './modules/fetch-btc.js';
 import DropdownMenu from './modules/dropdown-menu.js';
@@ -42,8 +42,8 @@ dropdownMenu.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
-initTooltip();
-initFuncionamento();
+const funcionamento = new Funcionamento('[data-semana]', 'aberto');
+funcionamento.init();
 
 fetchAves('/aves-api.json', '.numeros-grid');
 fetchBTC('https://blockchain.info/ticker', '.btc-preco');
