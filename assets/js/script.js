@@ -32,7 +32,9 @@ modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
-initScrollAnima();
+const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
+scrollAnima.init();
+
 initTooltip();
 initDropdownMenu();
 initMenuMobile();
