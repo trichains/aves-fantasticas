@@ -9,7 +9,6 @@ import MenuMobile from './modules/menu-mobile.js';
 import Funcionamento from './modules/funcionamento.js';
 import fetchAves from './modules/fetch-aves.js';
 import fetchBTC from './modules/fetch-btc.js';
-import DropdownMenu from './modules/dropdown-menu.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
