@@ -3,12 +3,12 @@ import Accordion from './modules/accordion.js';
 import TabNav from './modules/tab-nav.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
-import initScrollAnima from './modules/scroll-anima.js';
+import ScrollAnima from './modules/scroll-anima.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
 import fetchAves from './modules/fetch-aves.js';
-import initFetchBtc from './modules/fetch-btc.js';
+import fetchBTC from './modules/fetch-btc.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -37,6 +37,6 @@ initTooltip();
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
-initFetchBtc();
 
 fetchAves('/aves-api.json', '.numeros-grid');
+fetchBTC('https://blockchain.info/ticker', '.btc-preco');
