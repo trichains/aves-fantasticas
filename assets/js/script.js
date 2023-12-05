@@ -5,7 +5,7 @@ import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
 import ScrollAnima from './modules/scroll-anima.js';
 import DropdownMenu from './modules/dropdown-menu.js';
-import initMenuMobile from './modules/menu-mobile.js';
+import MenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
 import fetchAves from './modules/fetch-aves.js';
 import fetchBTC from './modules/fetch-btc.js';
@@ -39,8 +39,10 @@ scrollAnima.init();
 const dropdownMenu = new DropdownMenu('[data-dropdown]');
 dropdownMenu.init();
 
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
+
 initTooltip();
-initMenuMobile();
 initFuncionamento();
 
 fetchAves('/aves-api.json', '.numeros-grid');
