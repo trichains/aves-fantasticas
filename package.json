@@ -4,7 +4,7 @@
   "description": "Um site contendo uma coleção de aves incriveis",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production ./assets/js/script.js -o ./assets/js/main.js",
+    "build": "node_modules/.bin/webpack --mode production ./assets/js/script.js -o ./assets/js/main.js",
     "dev": "webpack --mode development --watch ./assets/js/script.js -o ./assets/js/main.js"
   },
   "license": "ISC",
