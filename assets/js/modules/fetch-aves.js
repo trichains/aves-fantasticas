@@ -1,4 +1,4 @@
-import initAnimaNumber from './anima-numeros.js';
+import AnimaNumeros from './anima-numeros.js';
 
 export default function initFetchAves() {
   async function fetchAves(url) {
@@ -12,7 +12,12 @@ export default function initFetchAves() {
         numerosGrid.appendChild(divAve);
       });
 
-      initAnimaNumber();
+      const animaNumeros = new AnimaNumeros(
+        '[data-numero]',
+        '.numeros',
+        'ativo'
+      );
+      animaNumeros();
     } catch (error) {
       console.error('Erro ao buscar as aves:', error);
     }
