@@ -3,10 +3,10 @@ import Accordion from './modules/accordion.js';
 import TabNav from './modules/tab-nav.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
-import ScrollAnima from './modules/scroll-anima.js';
 import DropdownMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
 import Funcionamento from './modules/funcionamento.js';
+import ScrollAnima from './modules/scroll-anima.js';
 import fetchAves from './modules/fetch-aves.js';
 import fetchBTC from './modules/fetch-btc.js';
 
@@ -44,5 +44,5 @@ menuMobile.init();
 const funcionamento = new Funcionamento('[data-semana]', 'aberto');
 funcionamento.init();
 
-fetchAves('/aves-api.json', '.numeros-grid');
+fetchAves('./aves-api.json', '.numeros-grid');
 fetchBTC('https://blockchain.info/ticker', '.btc-preco');

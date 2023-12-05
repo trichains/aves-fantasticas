@@ -26,7 +26,7 @@ export default class DropdownMenu {
   addDropdownMenusEvents() {
     this.dropdownMenus.forEach((menu) => {
       this.events.forEach((userEvent) => {
-        menu.addEventListener(userEvent, this.activeDropdownMenu.bind(menu));
+        menu.addEventListener(userEvent, this.activeDropdownMenu);
       });
     });
   }
