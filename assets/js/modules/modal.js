@@ -1,7 +1,7 @@
 export default class Modal {
-  constructor(botaoAbrir, botaoFechar, containerModal) {
-    this.botaoAbrir = document.querySelector(botaoAbrir);
-    this.botaoFechar = document.querySelector(botaoFechar);
+  constructor(openButton, closeButton, containerModal) {
+    this.openButton = document.querySelector(openButton);
+    this.closeButton = document.querySelector(closeButton);
     this.containerModal = document.querySelector(containerModal);
 
     // bind this ao callback para o this do objeto da classe ser o objeto da classe
@@ -29,14 +29,14 @@ export default class Modal {
 
   // adiciona os eventos aos elementos do modal
   addModalEvent() {
-    this.botaoAbrir.addEventListener('click', this.eventToggleModal);
-    this.botaoFechar.addEventListener('click', this.eventToggleModal);
+    this.openButton.addEventListener('click', this.eventToggleModal);
+    this.closeButton.addEventListener('click', this.eventToggleModal);
     this.containerModal.addEventListener('click', this.cliqueForaModal);
   }
 
   // inicializa o modal
   init() {
-    if (this.botaoAbrir && this.botaoFechar && this.containerModal) {
+    if (this.openButton && this.closeButton && this.containerModal) {
       this.addModalEvent();
     }
     return this;
