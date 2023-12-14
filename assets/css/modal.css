@@ -1,7 +1,7 @@
 .modal-container {
   height: 100vh;
   width: 100%;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
@@ -23,8 +23,8 @@
   position: relative;
   max-width: 600px;
   max-height: 80vh;
-  min-width: 200px;
   font-family: 'IBM Plex Mono', monospace;
+  box-sizing: border-box;
 }
 
 @keyframes modal {
@@ -39,7 +39,7 @@
 }
 
 .ativo .modal {
-  animation: modal .3s forwards;
+  animation: modal 0.3s forwards;
 }
 
 .close {
@@ -51,7 +51,7 @@
   border: 4px solid white;
   border-radius: 50%;
   background: #d63;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
   font-size: 1.2rem;
   color: white;
   cursor: pointer;
@@ -62,12 +62,12 @@
   font-family: 'IBM Plex Mono', monospace;
   display: block;
   font-weight: bold;
-  margin: 1rem 0 .5rem 0;
+  margin: 1rem 0 0.5rem 0;
 }
 
 .modal input {
   width: 100%;
-  padding: .7rem .5rem;
+  padding: 0.7rem 0.5rem;
   box-sizing: border-box;
   border: 2px solid #222;
   border-radius: 0;
@@ -76,12 +76,12 @@
   font-size: 1rem;
 }
 
-.modal button[type="submit"] {
+.modal button[type='submit'] {
   display: block;
   background: #d63;
   border: none;
   border-radius: 4px;
-  padding: .7rem 2rem;
+  padding: 0.7rem 2rem;
   font-size: 1rem;
   color: white;
   font-family: 'IBM Plex Mono', monospace;
@@ -92,6 +92,6 @@
 
 .modal p {
   font-family: 'IBM Plex Mono', monospace;
-  margin-top: .5rem;
-  opacity: .8;
+  margin-top: 0.5rem;
+  opacity: 0.8;
 }
